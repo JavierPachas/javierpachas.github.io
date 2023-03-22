@@ -1,3 +1,3 @@
-# Hi! I'm Javier Pachas and this is my GitHub Page.
-Only ML and AI related work.
-In progress ...
+# Hi! I'm Javier Pachas 
+This is my GitHub Page.
+Work in progress ...
