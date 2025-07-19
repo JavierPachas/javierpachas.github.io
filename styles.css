@@ -1,0 +1,63 @@
+/* —— base —— */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  line-height: 1.6;
+  color: #1a1a1a;
+  background: #fdfdfd;
+}
+
+/* —— layout —— */
+.section {
+  padding: 4rem 1rem;
+  max-width: 900px;
+  margin: auto;
+}
+.section.alt { background: #f5f5f7; }
+h1, h2, h3 { margin: 0 0 1rem; line-height: 1.2; }
+h1 { font-size: 2.75rem; font-weight: 800; }
+h2 { font-size: 1.75rem; font-weight: 600; color: #114488; }
+h3 { font-size: 1.25rem; font-weight: 600; }
+
+/* —— hero —— */
+.hero {
+  padding: 5rem 1rem 3rem;
+  text-align: center;
+  background: linear-gradient(135deg,#eef2ff,#fdfdfd 50%);
+}
+.hero .tagline { font-size: 1.15rem; margin: 0 0 1.5rem; color: #333; }
+.hero nav a {
+  margin: 0 0.6rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #114488;
+}
+.hero nav a:hover { text-decoration: underline; }
+
+/* —— badges —— */
+.badge-grid { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+.badge {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  border-radius: 9999px;
+  background: #114488;
+  color: #fff;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+/* —— projects —— */
+.project { margin-bottom: 2rem; }
+.project h3 { color: #114488; margin-bottom: 0.4rem; }
+.project p { margin: 0; }
+
+/* —— footer —— */
+footer {
+  text-align: center;
+  padding: 2rem 1rem 3rem;
+  font-size: 0.9rem;
+  color: #666;
+}
