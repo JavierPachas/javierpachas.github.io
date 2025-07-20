@@ -1,13 +1,14 @@
 /* General Body & Typography */
 :root {
   --primary-font: 'Inter', sans-serif;
+  --primary-color: #7DAAE8; /* A nice pastel blue */
   --text-color-dark: #333;
   --text-color-light: #555;
-  --background-color-light: #f9f9f9;
-  --background-color-alt: #f0f0f0;
-  --link-color: #007bff;
-  --link-hover-color: #0056b3;
-  --border-color: #eee;
+  --background-color-light: #fefefe; /* Very light almost white */
+  --background-color-alt: #F0F5F9; /* Light greyish-blue for alternate sections */
+  --link-color: var(--primary-color);
+  --link-hover-color: #5B8BE0; /* Slightly darker pastel blue on hover */
+  --border-color: #E0E0E0; /* Lighter border */
   --shadow-color: rgba(0, 0, 0, 0.05);
 }
 
@@ -54,7 +55,7 @@ h2::after {
   display: block;
   width: 50px;
   height: 3px;
-  background-color: var(--link-color);
+  background-color: var(--primary-color);
   margin: 0.5em auto 0;
   border-radius: 2px;
 }
@@ -94,8 +95,8 @@ a:hover {
 
 /* Header & Navigation */
 .hero {
-  background-color: var(--text-color-dark);
-  color: #fff;
+  background-color: var(--primary-color); /* Pastel blue background for the hero section */
+  color: var(--text-color-dark); /* Darker text for readability on light background */
   padding: 80px 20px;
   text-align: center;
   position: relative;
@@ -103,14 +104,8 @@ a:hover {
 }
 
 .hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(45deg, rgba(0,0,0,0.8), rgba(50,50,50,0.8));
-  z-index: 1;
+  /* Removed the dark overlay to allow pastel background to show */
+  content: none;
 }
 
 .hero > * {
@@ -118,10 +113,16 @@ a:hover {
   z-index: 2;
 }
 
+.hero h1 {
+    color: #fff; /* White text for the name on the blue background */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1); /* Subtle shadow for better contrast */
+}
+
 .tagline {
   font-size: 1.2em;
   font-weight: 300;
   margin-bottom: 2em;
+  color: #fff; /* White text for tagline as well */
   opacity: 0.9;
 }
 
@@ -130,7 +131,7 @@ a:hover {
 }
 
 .main-nav a {
-  color: #fff;
+  color: #fff; /* White links on the pastel blue background */
   margin: 0 15px;
   font-weight: 500;
   font-size: 1.1em;
@@ -146,7 +147,7 @@ a:hover {
   bottom: 0;
   width: 100%;
   height: 2px;
-  background-color: var(--link-color);
+  background-color: #fff; /* White underline for navigation */
   transform: scaleX(0);
   transition: transform 0.3s ease;
 }
@@ -157,7 +158,7 @@ a:hover {
 }
 
 .main-nav a:hover {
-  color: var(--link-color);
+  color: #e0e0e0; /* Slightly off-white on hover */
 }
 
 
@@ -220,7 +221,7 @@ a:hover {
 }
 
 .project-card h3 {
-  color: var(--link-color);
+  color: var(--primary-color); /* Use the pastel blue for project titles */
   margin-bottom: 0.8em;
 }
 
@@ -233,7 +234,7 @@ a:hover {
   display: inline-block;
   margin-top: 15px;
   font-weight: 600;
-  color: var(--link-color);
+  color: var(--primary-color); /* Use pastel blue for project links */
   text-decoration: none;
 }
 
@@ -251,14 +252,15 @@ a:hover {
 .contact-links a {
   font-weight: 500;
   margin: 0 5px;
+  color: var(--primary-color); /* Use pastel blue for contact links */
 }
 
 /* Footer */
 footer {
   text-align: center;
   padding: 30px 20px;
-  background-color: var(--text-color-dark);
-  color: #ccc;
+  background-color: var(--primary-color); /* Pastel blue for the footer */
+  color: #fff; /* White text for the footer */
   font-size: 0.9em;
 }
 
