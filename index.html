@@ -7,25 +7,21 @@
   <title>Javier Pachas – AI / ML Engineer</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet" />
 
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1CRWDTGJV7"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-1CRWDTGJV7');
-</script>
-  
+  <script async src="https://www.googletagmanager.com/gtag/js/id=G-1CRWDTGJV7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-1CRWDTGJV7');
+  </script>
 </head>
-<body>
-  <!-- ===== HERO ===== -->
+<body class="fade-in">
   <header class="hero">
     <h1>Javier Pachas</h1>
     <p class="tagline">AI&nbsp;/&nbsp;ML Engineer &nbsp;·&nbsp; Analytics Leader &nbsp;·&nbsp; MSc Physics</p>
-    <nav>
+    <nav class="main-nav">
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
@@ -33,21 +29,15 @@
     </nav>
   </header>
 
-  <!-- ===== ABOUT ===== -->
   <section id="about" class="section">
     <h2>About</h2>
-    
-    <ul>
-      <li>Analytics &amp; Insights Senior Manager at Procter &amp; Gamble</li>
-      <li>Telefonica, Clinica Internacional, Mobile Internet Group, Jicamarca Radio Observatory</li>
-      <li>Builder of production-grade ML systems with a focus on LLMs, MLOps, and data-driven product strategy</li>
-      <li>Former roles: Machine Learning Consultant and Lead Data Scientist.</li>
-      <li>MSc Physics</li>
-      <li>MIT Statistics &amp; Data Science MicroMaster</li>
-    </ul>
+    <div class="about-content">
+      <p>Analytics &amp; Insights Senior Manager at Procter &amp; Gamble, with prior roles at Telefonica, Clinica Internacional, Mobile Internet Group, and Jicamarca Radio Observatory.</p>
+      <p>Specialized in building production-grade ML systems, focusing on **LLMs, MLOps, and data-driven product strategy**. Formerly a Machine Learning Consultant and Lead Data Scientist.</p>
+      <p>Holds an **MSc in Physics** and completed the **MIT Statistics &amp; Data Science MicroMaster**.</p>
+    </div>
   </section>
 
-  <!-- ===== SKILLS ===== -->
   <section id="skills" class="section alt">
     <h2>Core Skills</h2>
     <div class="badge-grid">
@@ -63,38 +53,37 @@
     </div>
   </section>
 
-  <!-- ===== PROJECTS ===== -->
   <section id="projects" class="section">
     <h2>Selected Projects</h2>
 
-    <article class="project">
+    <article class="project-card">
       <h3>Roberta Sentiment Classifier</h3>
       <p>
-        Fine-tuned RoBERTa model for Spanish product reviews; 90 % macro-F1,
-        packaged for real-time inference. <a href="https://github.com/JavierPachas/sentiment_classification_roberta" target="_blank">GitHub ↗</a>
+        Fine-tuned RoBERTa model for Spanish product reviews; achieving **90% macro-F1**, packaged for real-time inference.
       </p>
+      <a href="https://github.com/JavierPachas/sentiment_classification_roberta" target="_blank" class="project-link">GitHub ↗</a>
     </article>
 
-    <article class="project">
+    <article class="project-card">
       <h3>Diabetes Risk Predictor</h3>
       <p>
-        End-to-end ML pipeline (data prep → model → FastAPI) containerised with
-        Docker and deployed to Cloud Run. <a href="https://github.com/JavierPachas/diabetes" target="_blank">GitHub ↗</a>
+        An end-to-end ML pipeline (data prep → model → FastAPI) containerised with Docker and deployed to Cloud Run.
       </p>
+      <a href="https://github.com/JavierPachas/diabetes" target="_blank" class="project-link">GitHub ↗</a>
     </article>
 
-    <article class="project">
-      <h3>Langchain Restaurante Name Generator</h3>
+    <article class="project-card">
+      <h3>Langchain Restaurant Name Generator</h3>
       <p>
-        Selecting a cuisine from the left bar, this app will generate a name for that restaurant and a list of ten menu items. Tools: Langchain, Gemini API, streamlit <a href="https://github.com/JavierPachas/langchain_gemini_app" target="_blank">GitHub ↗</a>
+        This app generates restaurant names and menu items based on cuisine, utilizing **Langchain, Gemini API, and Streamlit**.
       </p>
+      <a href="https://github.com/JavierPachas/langchain_gemini_app" target="_blank" class="project-link">GitHub ↗</a>
     </article>
   </section>
 
-  <!-- ===== CONTACT ===== -->
   <section id="contact" class="section alt">
     <h2>Let’s connect</h2>
-    <p>
+    <p class="contact-links">
       <a href="mailto:javalepc@gmail.com">javalepc@gmail.com</a><br/>
       <a href="https://linkedin.com/in/javierpachas" target="_blank">LinkedIn</a> ·
       <a href="https://github.com/JavierPachas" target="_blank">GitHub</a>
@@ -102,7 +91,7 @@
   </section>
 
   <footer>
-    © 2025 Javier Pachas. Built with pure HTML/CSS, hosted on GitHub Pages.
+    <p>© 2025 Javier Pachas. Built with pure HTML/CSS, hosted on GitHub Pages.</p>
   </footer>
 
   <script src="script.js"></script>
