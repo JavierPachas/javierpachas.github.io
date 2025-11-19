@@ -1,15 +1,14 @@
 /* General Body & Typography */
 :root {
   --primary-font: 'Inter', sans-serif;
-  --primary-color: #7DAAE8; /* A nice pastel blue, used for accents (headings, links) */
-  --text-color-dark: #333; /* Dark gray for primary text */
-  --text-color-light: #555; /* Slightly lighter gray for secondary text/taglines */
-  --background-color-light: #fefefe; /* Very light almost white for main sections */
-  --background-color-alt: #F0F5F9; /* Light greyish-blue for alternate sections (skills, hero, footer) */
-  --link-color: var(--primary-color);
-  --link-hover-color: #5B8BE0; /* Slightly darker pastel blue on hover */
-  --border-color: #E0E0E0; /* Lighter border for separation */
-  --shadow-color: rgba(0, 0, 0, 0.05); /* Subtle shadow color */
+  --primary-color: #0a1f44; /* Deep Navy */
+  --text-color-dark: #101b2b;
+  --text-color-light: #5d687a; /* Slate Grey */
+  --background-color-light: #f2f5fb;
+  --background-color-alt: #e6eaf3;
+  --link-color: var(--text-color-dark);
+  --link-hover-color: var(--primary-color);
+  --border-color: #c5cfdf;
 }
 
 body {
@@ -30,7 +29,7 @@ body.fade-in {
 }
 
 h1, h2, h3 {
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text-color-dark);
   margin-top: 0;
   margin-bottom: 0.8em;
@@ -38,31 +37,19 @@ h1, h2, h3 {
 
 h1 {
   font-size: 2.8em;
-  font-weight: 800;
+  font-weight: 600;
 }
 
 h2 {
   font-size: 2em;
-  font-weight: 600;
+  font-weight: 500;
   text-align: center;
-  margin-bottom: 1.5em;
-  position: relative;
-  padding-bottom: 0.5em;
-}
-
-h2::after {
-  content: '';
-  display: block;
-  width: 50px;
-  height: 3px;
-  background-color: var(--primary-color);
-  margin: 0.5em auto 0;
-  border-radius: 2px;
+  margin-bottom: 1.1em;
 }
 
 h3 {
   font-size: 1.5em;
-  font-weight: 500;
+  font-weight: 400;
   margin-bottom: 0.5em;
 }
 
@@ -78,13 +65,12 @@ a {
 
 a:hover {
   color: var(--link-hover-color);
-  text-decoration: underline;
 }
 
 /* Layout & Structure */
 .section {
-  padding: 60px 20px;
-  max-width: 900px;
+  padding: 55px 18px;
+  max-width: 720px;
   margin: 0 auto;
   text-align: center;
 }
@@ -95,35 +81,24 @@ a:hover {
 
 /* Header & Navigation */
 .hero {
-  background-color: var(--background-color-alt); /* Uses the same light greyish-blue as skills */
-  color: var(--text-color-dark); /* Main text color for hero */
-  padding: 80px 20px;
+  background: linear-gradient(135deg, #0a1f44, #1c2a3f);
+  color: #f3f6ff;
+  padding: 80px 20px 55px;
   text-align: center;
   position: relative;
   overflow: hidden;
-  border-bottom: 1px solid var(--border-color); /* Subtle separation line */
-  box-shadow: 0 2px 5px var(--shadow-color); /* Subtle shadow */
-}
-
-.hero::before {
-  content: none; /* Ensure no dark overlay */
-}
-
-.hero > * {
-  position: relative;
-  z-index: 2;
 }
 
 .hero h1 {
-    color: var(--text-color-dark); /* Dark text for the name */
-    text-shadow: none; /* No shadow needed on light background */
+  color: #f3f6ff;
+  text-shadow: none;
 }
 
 .tagline {
   font-size: 1.2em;
   font-weight: 300;
   margin-bottom: 2em;
-  color: var(--text-color-light); /* Slightly lighter dark text for tagline */
+  color: #cdd6e8;
   opacity: 1; /* Ensure full opacity */
 }
 
@@ -132,34 +107,17 @@ a:hover {
 }
 
 .main-nav a {
-  color: var(--text-color-dark); /* Dark links on the light background */
+  color: #dee5f7;
   margin: 0 15px;
   font-weight: 500;
-  font-size: 1.1em;
+  font-size: 0.9em;
   padding: 5px 0;
-  position: relative;
-  transition: color 0.3s ease;
-}
-
-.main-nav a::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 2px;
-  background-color: var(--primary-color); /* Pastel blue underline for navigation */
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
-}
-
-.main-nav a:hover::after,
-.main-nav a.active::after {
-  transform: scaleX(1);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
 }
 
 .main-nav a:hover {
-  color: var(--primary-color); /* Pastel blue on hover */
+  color: #8db3ff;
 }
 
 
@@ -175,6 +133,65 @@ a:hover {
   color: var(--text-color-light);
 }
 
+.previous-label {
+  margin-top: 16px;
+  font-size: 1em;
+  font-weight: 600;
+  color: var(--text-color-dark);
+}
+
+.previous-companies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 18px 0;
+  padding-left: 5px;
+}
+
+.previous-companies span {
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 8px 14px;
+  font-size: 0.95em;
+  color: var(--text-color-dark);
+  background-color: rgba(16, 27, 43, 0.04);
+}
+
+.previous-companies span em {
+  font-style: normal;
+  color: var(--text-color-light);
+  display: block;
+  font-size: 0.9em;
+  margin-top: 2px;
+}
+
+/* Education Section */
+.education-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  text-align: left;
+}
+
+.education-entry {
+  padding-left: 20px;
+  border-left: 2px solid var(--border-color);
+}
+
+.education-school {
+  font-size: 1.05em;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  margin-bottom: 0.4em;
+}
+
+.education-detail {
+  font-size: 1.1em;
+  font-weight: 400;
+  color: var(--text-color-light);
+}
+
 /* Skills Section - Already uses background-color-alt correctly */
 .badge-grid {
   display: flex;
@@ -185,62 +202,33 @@ a:hover {
 }
 
 .badge {
-  background-color: #fff;
+  background-color: rgba(10, 31, 68, 0.05);
   border: 1px solid var(--border-color);
   padding: 10px 20px;
   border-radius: 25px;
   font-size: 0.95em;
   font-weight: 500;
   color: var(--text-color-dark);
-  box-shadow: 0 2px 5px var(--shadow-color);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: color 0.2s ease, border-color 0.2s ease;
 }
 
 .badge:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 8px var(--shadow-color);
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+  background-color: rgba(10, 31, 68, 0.12);
 }
 
-/* Projects Section */
-.project-card {
-  background-color: #fff;
-  border: 1px solid var(--border-color);
-  border-radius: 8px;
-  padding: 30px;
-  margin-bottom: 25px;
-  text-align: left;
-  box-shadow: 0 4px 10px var(--shadow-color);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  max-width: 650px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-}
-
-.project-card h3 {
-  color: var(--primary-color); /* Uses pastel blue for project titles */
-  margin-bottom: 0.8em;
-}
-
-.project-card p {
-  color: var(--text-color-light);
-  line-height: 1.7;
-}
-
+/* Highlighted inline links */
 .project-link {
-  display: inline-block;
-  margin-top: 15px;
+  display: inline;
+  margin: 0;
   font-weight: 600;
-  color: var(--primary-color); /* Uses pastel blue for project links */
+  color: var(--primary-color);
   text-decoration: none;
 }
 
 .project-link:hover {
-  text-decoration: underline;
+  color: #0f3c88;
 }
 
 /* Contact Section - Already uses background-color-alt correctly */
@@ -253,18 +241,20 @@ a:hover {
 .contact-links a {
   font-weight: 500;
   margin: 0 5px;
-  color: var(--primary-color); /* Uses pastel blue for contact links */
+  color: var(--text-color-dark);
+}
+
+.contact-links a:hover {
+  color: var(--primary-color);
 }
 
 /* Footer */
 footer {
   text-align: center;
   padding: 30px 20px;
-  background-color: var(--background-color-alt); /* Uses the same light greyish-blue as skills */
-  color: var(--text-color-light); /* Lighter dark text for the footer */
+  background-color: var(--background-color-alt);
+  color: var(--text-color-light);
   font-size: 0.9em;
-  border-top: 1px solid var(--border-color); /* Subtle top border */
-  box-shadow: 0 -2px 5px var(--shadow-color); /* Subtle top shadow */
 }
 
 footer p {
