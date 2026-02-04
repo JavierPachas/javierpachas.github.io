@@ -120,6 +120,23 @@ a:hover {
   color: #8db3ff;
 }
 
+.main-nav a.active {
+  color: #8db3ff;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+.main-nav a.nav-back {
+  border: 1px solid rgba(222, 229, 247, 0.6);
+  border-radius: 999px;
+  padding: 6px 14px;
+  letter-spacing: 0.12em;
+}
+
+.main-nav a.nav-back:hover {
+  border-color: #8db3ff;
+}
+
 
 /* About Section */
 .about-content {

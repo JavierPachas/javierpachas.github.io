@@ -5,11 +5,18 @@ document.addEventListener('DOMContentLoaded', () => {
   // Smooth scrolling for navigation links
   document.querySelectorAll('nav a').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-      e.preventDefault();
+      const href = this.getAttribute('href');
+      if (!href || !href.startsWith('#')) {
+        return;
+      }
 
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth'
-      });
+      const target = document.querySelector(href);
+      if (!target) {
+        return;
+      }
+
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth' });
     });
   });
 
