@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-i18n-title="title.index">
 
 <head>
   <meta charset="utf-8" />
@@ -22,67 +22,72 @@
 
 <body class="fade-in">
   <header class="hero">
+    <div class="lang-switch" role="group" aria-label="Language">
+      <button type="button" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-lang="es" aria-pressed="false">ES</button>
+      <button type="button" data-lang="pt" aria-pressed="false">PT</button>
+    </div>
     <h1>Javier Pachas</h1>
-    <p class="tagline">AI PM &nbsp;·&nbsp; Analytics Leader &nbsp;·&nbsp; MSc Physics</p>
+    <p class="tagline" data-i18n="hero.tagline">AI PM &nbsp;·&nbsp; Analytics Leader &nbsp;·&nbsp; MSc Physics</p>
     <nav class="main-nav">
-      <a href="#about">About</a>
-      <a href="#education">Education</a>
-      <a href="#skills">Skills</a>
-      <a href="consulting.html">Consulting</a>
-      <a href="#contact">Contact</a>
+      <a href="#about" data-i18n="nav.about">About</a>
+      <a href="#education" data-i18n="nav.education">Education</a>
+      <a href="#skills" data-i18n="nav.skills">Skills</a>
+      <a href="consulting.html" data-i18n="nav.consulting">Consulting</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
     </nav>
   </header>
 
   <section id="about" class="section">
-    <h2>About</h2>
+    <h2 data-i18n="about.title">About</h2>
     <div class="about-content">
-      <p>Lead Data Scientist and ML consultant with more than seven years of experience delivering data-driven solutions
+      <p data-i18n="about.p1">Lead Data Scientist and ML consultant with more than seven years of experience delivering data-driven solutions
         for consumer goods, healthcare, government, telecom, streaming media, and atmospheric research.</p>
-      <p>Proficient in Python, SQL, data visualization, cloud computing, mathematical optimization, and applied AI.
+      <p data-i18n="about.p2">Proficient in Python, SQL, data visualization, cloud computing, mathematical optimization, and applied AI.
         Fluent in English, Portuguese, and Spanish (native).</p>
-      <p>Founder and AI PM of <a href="https://edbotlab.com" target="_blank" rel="noopener noreferrer" class="project-link">an AI-driven
+      <p data-i18n="about.p3">Founder and AI PM of <a href="https://edbotlab.com" target="_blank" rel="noopener noreferrer" class="project-link">an AI-driven
           EdTech platform</a> that personalizes admissions prep. Let’s connect if you’d like to collaborate, discuss AI
         applications, or share innovation stories.</p>
-      <p class="previous-label">Previous companies &amp; roles</p>
+      <p class="previous-label" data-i18n="about.previous">Previous companies &amp; roles</p>
       <div class="previous-companies">
-        <span>Procter &amp; Gamble <em>Analytics &amp; Insights Senior Manager</em></span>
-        <span>CGR <em>ML and BI Consultant</em></span><span>CRP Radios <em>Lead of Data Science</em></span>
-        <span>Clínica Internacional <em>Lead of Data Analytics</em></span>
-        <span>Telefónica <em>Pricing Specialist</em></span>
-        <span>Movix <em>Business Analyst</em></span>
+        <span>Procter &amp; Gamble <em data-i18n="role.pg">Analytics &amp; Insights Senior Manager</em></span>
+        <span>CGR <em data-i18n="role.cgr">ML and BI Consultant</em></span><span>CRP Radios <em data-i18n="role.crp">Lead of Data Science</em></span>
+        <span>Clínica Internacional <em data-i18n="role.clinica">Lead of Data Analytics</em></span>
+        <span>Telefónica <em data-i18n="role.telefonica">Pricing Specialist</em></span>
+        <span>Movix <em data-i18n="role.movix">Business Analyst</em></span>
       </div>
     </div>
   </section>
 
   <section id="education" class="section">
-    <h2>Education</h2>
+    <h2 data-i18n="education.title">Education</h2>
     <div class="education-list">
       <article class="education-entry">
         <p class="education-school">Massachusetts Institute of Technology</p>
-        <p class="education-detail">Remote · MicroMaster in Data Science and Statistics · 2023</p>
+        <p class="education-detail" data-i18n="edu.mit">Remote · MicroMaster in Data Science and Statistics · 2023</p>
       </article>
 
       <article class="education-entry">
         <p class="education-school">Pontificia Universidade Católica do Rio de Janeiro</p>
-        <p class="education-detail">Brazil · MSc High-Energy Physics · 2015</p>
+        <p class="education-detail" data-i18n="edu.puc">Brazil · MSc High-Energy Physics · 2015</p>
       </article>
 
       <article class="education-entry">
         <p class="education-school">Universidad Nacional de Ingeniería</p>
-        <p class="education-detail">Peru · BSc Physics · 2008</p>
+        <p class="education-detail" data-i18n="edu.uni">Peru · BSc Physics · 2008</p>
       </article>
     </div>
   </section>
 
   <section id="skills" class="section alt">
-    <h2>Core Skills</h2>
+    <h2 data-i18n="skills.title">Core Skills</h2>
     <div class="badge-grid">
       <span class="badge">Python</span>
       <span class="badge">SQL</span>
-      <span class="badge">Data Structures & Algorithms</span>
+      <span class="badge" data-i18n="skill.dsa">Data Structures &amp; Algorithms</span>
       <span class="badge">Machine Learning</span>
       <span class="badge">FastAPI</span>
-      <span class="badge">Large Language Models</span>
+      <span class="badge" data-i18n="skill.llm">Large Language Models</span>
       <span class="badge">Databricks</span>
       <span class="badge">Langchain & Hugging Face</span>
       <span class="badge">MongoDB</span>
@@ -92,7 +97,7 @@
   </section>
 
   <section id="contact" class="section alt">
-    <h2>Let’s connect</h2>
+    <h2 data-i18n="contact.title">Let’s connect</h2>
     <p class="contact-links">
       <a href="mailto:javalepc@gmail.com">javalepc@gmail.com</a><br />
       <a href="https://linkedin.com/in/javierpachas" target="_blank" rel="noopener noreferrer">LinkedIn</a> ·
@@ -101,9 +106,10 @@
   </section>
 
   <footer>
-    <p>© 2025 Javier Pachas. Built with pure HTML/CSS, hosted on GitHub Pages.</p>
+    <p data-i18n="footer.index">© 2025 Javier Pachas. Built with pure HTML/CSS, hosted on GitHub Pages.</p>
   </footer>
 
+  <script src="i18n.js"></script>
   <script src="script.js"></script>
 </body>
 
