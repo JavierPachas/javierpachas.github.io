@@ -151,10 +151,10 @@ a:hover {
 .lang-switch button {
   background: transparent;
   border: 0;
-  color: #dee5f7;
+  color: rgba(222, 229, 247, 0.6);
   font-family: var(--primary-font);
   font-size: 0.75em;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 0.12em;
   padding: 6px 12px;
   cursor: pointer;
@@ -170,8 +170,10 @@ a:hover {
 }
 
 .lang-switch button[aria-pressed="true"] {
-  background-color: #dee5f7;
+  background-color: #f3f6ff;
   color: var(--primary-color);
+  font-weight: 700;
+  cursor: default;
 }
 
 .lang-switch button:focus-visible {
